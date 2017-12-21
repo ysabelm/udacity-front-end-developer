@@ -1,0 +1,18 @@
+You've learned a lot about web development so far. I want you to take a moment to write down your thoughts about web development here. Answer the following questions:
+  * What new skills have you learned?
+  * What has been easy?
+  * What has been difficult?
+  * How have you used the problem solving strategies from the first project to overcome challenges so far?
+
+---
+
+Your response goes here!
+
+* I learned a lot even if I’m not a real beginner. I knew about « parents and children » but the way you teach it is quite relevant. I learned : ‘figure’ and ‘figcaption’, <sup>, <hr>. 
+
+* So far, the exercices are quite easy. It didn’t prevent me from « freezing » a few times . It’s part of learning to code.
+
+* Sometimes, I didn’t understand the way I had to « deliver » my work. I guess it’s because english is not my native tongue. And maybe, I read too fast…
+
+* Mostly, following advices and hints and thanks to MDN too.
+
