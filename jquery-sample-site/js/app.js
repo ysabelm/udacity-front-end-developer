@@ -28,9 +28,18 @@ first = articleItems.first();
 ul = first.children('ul');
 ul.remove();
 
+
 $('#input').on('change', function() {
     var val, h1;
     val = $('#input').val();
     h1 = $('.articles').children('h1');
     h1.text(val);
+});
+
+
+$('p').each( function () {
+    var len, text;
+    text = $(this).text();
+    len = text.length;
+    $(this).text(text + " " + len);
 });
