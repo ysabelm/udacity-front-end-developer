@@ -20,11 +20,13 @@ link = firstItem.find('a');
 link.attr('href', '#1');
 
 
-var articleItems;
+var articleItems, first, ul;
 
 articleItems = $('.article-item');
 articleItems.css('fontSize', '20px');
-
+first = articleItems.first();
+ul = first.children('ul');
+ul.remove();
 
 $('#input').on('change', function() {
     var val, h1;
