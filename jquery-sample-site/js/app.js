@@ -48,3 +48,10 @@ $('p').each( function () {
 $(function () {
 	$("img").attr("src", "http://lorempixel.com/350/150/animals/");
 });
+
+
+
+$('#my-button').on('click', function () {
+    $(this).remove();
+    $(body).addClass('success');
+});
