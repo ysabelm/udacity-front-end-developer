@@ -3,12 +3,14 @@ var featuredArticle;
 featuredArticle = $('li.featured').toggleClass('featured');
 console.log(featuredArticle);
 
+
 var article2, article3;
 
 article2 = $('.featured');
 article3 = article2.next();
 article2.toggleClass('featured');
 article3.toggleClass('featured');
+
 
 var navList, firstItem, link;
 
@@ -17,7 +19,16 @@ firstItem = navList.children().first();
 link = firstItem.find('a');
 link.attr('href', '#1');
 
+
 var articleItems;
 
 articleItems = $('.article-item');
 articleItems.css('fontSize', '20px');
+
+
+$('#input').on('change', function() {
+    var val, h1;
+    val = $('#input').val();
+    h1 = $('.articles').children('h1');
+    h1.text(val);
+});
