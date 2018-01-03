@@ -16,3 +16,8 @@ navList = $('.nav-list');
 firstItem = navList.children().first();
 link = firstItem.find('a');
 link.attr('href', '#1');
+
+var articleItems;
+
+articleItems = $('.article-item');
+articleItems.css('fontSize', '20px');
