@@ -43,3 +43,8 @@ $('p').each( function () {
     len = text.length;
     $(this).text(text + " " + len);
 });
+
+
+$(function () {
+	$("img").attr("src", "http://lorempixel.com/350/150/animals/");
+});
