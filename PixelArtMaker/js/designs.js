@@ -1,50 +1,29 @@
-// Select color input
-let color = "";
-// Select size input
-let width = "";
-let height = "";
+$(document).ready(() => {
 
-// When size is submitted by the user, call makeGrid()
+let canvas = $("#pixel_canvas");
+
 
 function makeGrid() {
-	
+    let row = $("#input_height").val();
+    let cell = $("#input_width").val();
+    // Create rows
+    for (let i = 0; i < row; i++) {
+        canvas.append("<tr></tr>");
+        // Create cells
+        for (let j = 0; j < cell; j++) {
+            canvas.children().last().append("<td></td>");
+        }
+    }
+};
 
-// Your code goes here!
-
-}
-
-
-
-
-
-/*$(document).ready(function(){
-
-    $(".container").append("<div></div>");
-    $("div").css({
-        "display": "inline-block",
-        "width": "squareWidth px",
-        "height": "squareHeight px",
-        "background-color": "red"
+    $('input[type="submit"]').on('click', (e) => {
+        e.preventDefault();
+        makeGrid();
     });
-
-    });*/
-
-/*var rows = 8;
-var columns = 8;
-var $row = $("<div />", {
-    class: 'row'
-});
-var $square = $("<div />", {
-    class: 'square'
+    canvas.on('click', 'td', (e) => {
+        let color = $('#colorPicker').val();
+        $(e.currentTarget).css('background-color', color);
+    });
 });
 
-$(document).ready(function () {
-    //add columns to the the temp row object
-    for (var i = 0; i < columns; i++) {
-        $row.append($square.clone());
-    }
-    //clone the temp row object with the columns to the wrapper
-    for (var i = 0; i < rows; i++) {
-        $("#wrapper").append($row.clone());
-    }
-});*/
+
