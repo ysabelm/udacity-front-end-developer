@@ -1,7 +1,8 @@
-$(document).ready(() => {
+$(function() {
 
 let canvas = $("#pixel_canvas");
 
+canvas.children().empty();
 
 function makeGrid() {
     let row = $("#input_height").val();
