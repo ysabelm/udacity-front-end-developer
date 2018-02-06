@@ -33,9 +33,12 @@ tr {
 
 td {
     width: 20px;
-    /*cursor: pointer;*/
 }
 
 input[type=number] {
     width: 6em;
+}
+
+input[type=reset] {
+    margin-top: 4em;
 }

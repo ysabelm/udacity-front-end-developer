@@ -2,8 +2,6 @@ $(function() {
 
 let canvas = $("#pixel_canvas");
 
-canvas.children().empty();
-
 function makeGrid() {
     let row = $("#input_height").val();
     let cell = $("#input_width").val();
@@ -17,14 +15,19 @@ function makeGrid() {
     }
 };
 
-    $('input[type="submit"]').on('click', (e) => {
-        e.preventDefault();
-        makeGrid();
-    });
-    canvas.on('click', 'td', (e) => {
-        let color = $('#colorPicker').val();
-        $(e.currentTarget).css('background-color', color);
-    });
+canvas.after('<input type="reset">');
+$('input[type="reset"]').on('click', (e) => {
+    canvas.empty();
+});
+$('input[type="submit"]').on('click', (e) => {
+    e.preventDefault();
+    makeGrid();
+});
+canvas.on('click', 'td', (e) => {
+    let color = $('#colorPicker').val();
+    $(e.currentTarget).css('background-color', color);
+});
+
 });
 
 
